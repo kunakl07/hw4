@@ -62,7 +62,7 @@ brew services restart prometheus
 Upon success, you should see our Dropwizard endpoint `http://localhost:8881/metrics` **UP** on the
 Prometheus [Status Targets](http://localhost:9090/targets) page.
 
-![Prometheus target](docs/images/prometheus.png)
+![Prometheus target](docs/images/part3.png)
 
 ### Grafana
 
@@ -79,7 +79,8 @@ brew services restart grafana
 Then use the [web application](http://localhost:3000) provided by Grafana to set up and
 configure our Prometheus data source.
 
-![Prometheus data source](docs/images/data-source.png)
+![Prometheus data source](docs/images/part2.png)
+![Prometheus data source](docs/images/part3.png)
 
 Add your newly created prometheus data source `http://localhost:3000/datasources/new`. Use `http://localhost:9090` for your grafana data source http url.
 
@@ -91,7 +92,7 @@ Use the query below to display requests per second.
 irate(article_requests_total[5m])
 ```
 
-![Grafana query](docs/images/query.png)
+![Grafana query](docs/images/part11.png)
 
 Curl the provenance articles endpoint to start tracking metrics. User a bash script similar to the example below to drive
 multiple requests per second.
@@ -102,7 +103,7 @@ while [ true ]; do for i in {1..10}; do curl -v -H "Accept: application/json" ht
 
 Your dashboard should start recording data.
 
-![Grafana dashboard](docs/images/dashboard.png)
+![Grafana dashboard](docs/images/part5.png)
 
 Capture a screenshot of your Prometheus targets page and Grafana dashboard to complete the exercise. 
 
