@@ -80,7 +80,7 @@ Then use the [web application](http://localhost:3000) provided by Grafana to set
 configure our Prometheus data source.
 
 ![Prometheus data source](docs/images/part2.png)
-![Prometheus data source](docs/images/part3.png)
+![Prometheus data source](docs/images/part4.png)
 
 Add your newly created prometheus data source `http://localhost:3000/datasources/new`. Use `http://localhost:9090` for your grafana data source http url.
 
